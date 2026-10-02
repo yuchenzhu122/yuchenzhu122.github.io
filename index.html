@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yuchen Zhu</title>
+  <meta name="description" content="Yuchen Zhu — Ph.D. candidate in Economics at the University of Florida. Education economics and labor markets.">
+  <link rel="icon" href="assets/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fafaf8;
+      --text: #1d1d1f;
+      --muted: #5f6368;
+      --accent: #0021a5;   /* UF blue */
+      --accent-2: #fa4616; /* UF orange */
+      --line: #e3e3df;
+      --card: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141518; --text: #ececec; --muted: #a0a4ab;
+        --accent: #8ea2ff; --accent-2: #ff8a5c; --line: #2c2e33; --card: #1c1d21;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font: 16px/1.65 "Inter", system-ui, sans-serif;
+    }
+    a { color: var(--accent); text-underline-offset: 3px; }
+    h1, h2 { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; line-height: 1.2; }
+
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: blur(8px); border-bottom: 1px solid var(--line);
+    }
+    .bar { max-width: 960px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; gap: 16px; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-weight: 600; }
+    .brand img { width: 32px; height: 32px; border-radius: 4px; }
+    nav { margin-left: auto; display: flex; gap: 20px; flex-wrap: wrap; }
+    nav a { color: var(--muted); text-decoration: none; font-size: 15px; font-weight: 500; }
+    nav a:hover { color: var(--accent); }
+
+    main { max-width: 960px; margin: 0 auto; padding: 0 20px 64px; }
+    section { padding: 56px 0 8px; }
+    section + section { border-top: 1px solid var(--line); margin-top: 40px; }
+    h2 { font-size: 28px; margin: 0 0 20px; }
+
+    .hero { display: grid; grid-template-columns: 280px 1fr; gap: 48px; align-items: start; }
+    .hero img { width: 100%; border-radius: 10px; display: block; }
+    .hero h1 { font-size: 40px; margin: 0 0 4px; }
+    .role { color: var(--muted); margin: 0 0 20px; }
+    .jm { display: inline-block; background: color-mix(in srgb, var(--accent-2) 14%, transparent);
+          color: var(--accent-2); font-weight: 600; font-size: 13px; padding: 3px 10px; border-radius: 999px; margin-bottom: 16px; }
+    .jmp { border-left: 3px solid var(--accent); padding: 10px 16px; background: var(--card); border-radius: 0 8px 8px 0; margin: 20px 0; }
+    .jmp small { display: block; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+    .jmp strong { font-family: "Source Serif 4", Georgia, serif; font-size: 18px; }
+    .links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
+    .btn { display: inline-block; padding: 8px 16px; border-radius: 8px; border: 1px solid var(--line);
+           background: var(--card); text-decoration: none; font-weight: 500; font-size: 15px; }
+    .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+    .timeline { list-style: none; padding: 0; margin: 0; }
+    .timeline li { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+    .timeline li:last-child { border-bottom: 0; }
+    .timeline span { color: var(--muted); white-space: nowrap; }
+    h3 { font-size: 15px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 8px; }
+
+    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    figure { margin: 0; background: var(--card); border-radius: 10px; overflow: hidden; border: 1px solid var(--line); }
+    figure img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
+    figcaption { padding: 10px 12px; text-align: center; font-weight: 500; font-size: 15px; }
+
+    footer { text-align: center; color: var(--muted); font-size: 14px; padding: 32px 20px; border-top: 1px solid var(--line); }
+
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; gap: 24px; }
+      .hero img { max-width: 240px; }
+      .hero h1 { font-size: 32px; }
+      .grid { grid-template-columns: repeat(2, 1fr); }
+      nav { gap: 14px; }
+      .brand span { display: none; }
+      .timeline li { flex-direction: column; gap: 2px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="#"><img src="assets/logo.jpg" alt="University of Florida"><span>Yuchen Zhu</span></a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#cv">CV</a>
+        <a href="#life">Life</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="hero">
+        <img src="assets/profile.jpg" alt="Portrait of Yuchen Zhu">
+        <div>
+          <h1>Yuchen Zhu</h1>
+          <p class="role">Ph.D. Candidate in Economics · University of Florida</p>
+          <span class="jm">On the 2026–2027 Job Market</span>
+          <p>I am a fifth-year Ph.D. student in Economics at the University of Florida. My research interests focus on <strong>education economics</strong> and <strong>labor markets</strong>.</p>
+          <div class="jmp">
+            <small>Job Market Paper</small>
+            <strong>Predicting College Major Switching with Machine Learning</strong>
+          </div>
+          <p>Before starting my Ph.D., I earned an M.S. in Economics from Johns Hopkins University and a B.A. in Economics (with a minor in Statistics) from the University of Illinois Urbana-Champaign.</p>
+          <p>Thank you for visiting my page — feel free to explore my research and get in touch!</p>
+          <div class="links">
+            <a class="btn primary" href="assets/cv.pdf">Download CV</a>
+            <a class="btn" href="mailto:yuchenzhu@ufl.edu">yuchenzhu@ufl.edu</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <h3>Ph.D. Research Experience</h3>
+      <ul class="timeline">
+        <li><div>Research Assistant to Robert Ainsworth</div><span>Spring 2024 – Fall 2024</span></li>
+        <li><div>Research Assistant to David Sappington</div><span>Spring 2023 – Summer 2024</span></li>
+        <li><div>Research Assistant to Javier Donna</div><span>Spring 2023</span></li>
+      </ul>
+    </section>
+
+    <section id="cv">
+      <h2>CV</h2>
+      <p>The latest version of my curriculum vitae is available as a PDF.</p>
+      <div class="links"><a class="btn primary" href="assets/cv.pdf">Download My CV (PDF)</a></div>
+    </section>
+
+    <section id="life">
+      <h2>Life</h2>
+      <div class="grid">
+        <figure><img src="assets/travel.jpg" alt="Sunset over the water" loading="lazy"><figcaption>Travel</figcaption></figure>
+        <figure><img src="assets/swimming.jpg" alt="Outdoor swimming pool" loading="lazy"><figcaption>Swimming / Exercise</figcaption></figure>
+        <figure><img src="assets/climbing.jpg" alt="Climbing wall" loading="lazy"><figcaption>Climbing</figcaption></figure>
+        <figure><img src="assets/cat.jpg" alt="My cat" loading="lazy"><figcaption>Cat person</figcaption></figure>
+      </div>
+    </section>
+  </main>
+
+  <footer>Get in touch at <a href="mailto:yuchenzhu@ufl.edu">yuchenzhu@ufl.edu</a></footer>
+</body>
+</html>
