@@ -99,6 +99,25 @@
     figure img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
     figcaption { padding: 10px 12px; text-align: center; font-weight: 500; font-size: 15px; }
 
+    .evals { margin: 8px 0 40px; padding: 18px 20px 12px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; }
+    .evals figcaption { padding: 0 0 12px; text-align: left; font-weight: 400; }
+    .evals figcaption strong { display: block; font-size: 15px; }
+    .evals figcaption span { display: inline-block; font-size: 13px; color: var(--muted); margin-right: 14px; }
+    .ev-key i { position: static !important; display: inline-block; vertical-align: -1px; margin: 0 4px 0 6px; }
+    .ev-row { display: grid; grid-template-columns: 220px 1fr 84px; align-items: center; min-height: 32px; font-size: 14px; }
+    .ev-label { padding-right: 12px; }
+    .ev-track { position: relative; height: 32px;
+                background: repeating-linear-gradient(to right, var(--line) 0 1px, transparent 1px 20%); }
+    .ev-track i { position: absolute; }
+    .ev-bar { top: 15px; height: 3px; background: color-mix(in srgb, var(--accent) 45%, transparent); }
+    .ev-me, .ev-dept { top: 10px; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%; box-sizing: border-box; }
+    .ev-me { background: var(--accent); }
+    .ev-dept { background: var(--card); border: 2px solid var(--muted); }
+    .ev-val { padding-left: 12px; white-space: nowrap; }
+    .ev-val span { color: #2e7d32; font-size: 13px; }
+    .ev-axis .ev-track { height: 18px; background: none; }
+    .ev-axis span { position: absolute; transform: translateX(-50%); font-size: 11px; color: var(--muted); }
+
     footer { text-align: center; color: var(--muted); font-size: 14px; padding: 32px 20px; border-top: 1px solid var(--line); }
 
     @media (max-width: 760px) {
@@ -107,6 +126,10 @@
       .hero h1 { font-size: 32px; }
       .grid { grid-template-columns: repeat(2, 1fr); }
       .stats { grid-template-columns: 1fr; }
+      .ev-row { grid-template-columns: 1fr 96px; }
+      .ev-label { grid-column: 1 / -1; padding-top: 6px; font-size: 13px; }
+      .ev-axis > div:first-child { display: none; }
+      .evals { padding: 14px 14px 10px; }
       nav { gap: 14px; }
       .brand span { display: none; }
       .timeline li { flex-direction: column; gap: 2px; }
@@ -189,6 +212,20 @@
       <ul class="timeline">
         <li><div>ECO 4421 Econometrics <em>· Undergraduate</em></div><span>Spring 2026, Fall 2026</span></li>
       </ul>
+      <figure class="evals" aria-label="Spring 2026 student evaluations for ECO 4421 compared with the department mean">
+        <figcaption>
+          <strong>Spring 2026 student evaluations: items above department mean</strong>
+          <span>ECO 4421 Econometrics · 24 responses · 1–5 scale</span>
+          <span class="ev-key"><i class="ev-me"></i> My score <i class="ev-dept"></i> Dept. mean</span>
+        </figcaption>
+          <div class="ev-row"><div class="ev-label">Improved critical thinking</div><div class="ev-track"><i class="ev-bar" style="left:32%;width:26%"></i><i class="ev-dept" style="left:32%"></i><i class="ev-me" style="left:58%"></i></div><div class="ev-val"><b>4.58</b> <span>+0.26</span></div></div>
+          <div class="ev-row"><div class="ev-label">Relevant, useful content</div><div class="ev-track"><i class="ev-bar" style="left:37%;width:21%"></i><i class="ev-dept" style="left:37%"></i><i class="ev-me" style="left:58%"></i></div><div class="ev-val"><b>4.58</b> <span>+0.21</span></div></div>
+          <div class="ev-row"><div class="ev-label">Student-instructor interaction</div><div class="ev-track"><i class="ev-bar" style="left:12%;width:21%"></i><i class="ev-dept" style="left:12%"></i><i class="ev-me" style="left:33%"></i></div><div class="ev-val"><b>4.33</b> <span>+0.21</span></div></div>
+          <div class="ev-row"><div class="ev-label">Overall course rating</div><div class="ev-track"><i class="ev-bar" style="left:30%;width:17%"></i><i class="ev-dept" style="left:30%"></i><i class="ev-me" style="left:47%"></i></div><div class="ev-val"><b>4.47</b> <span>+0.17</span></div></div>
+          <div class="ev-row"><div class="ev-label">Positive learning environment</div><div class="ev-track"><i class="ev-bar" style="left:65%;width:2%"></i><i class="ev-dept" style="left:65%"></i><i class="ev-me" style="left:67%"></i></div><div class="ev-val"><b>4.67</b> <span>+0.02</span></div></div>
+          <div class="ev-row"><div class="ev-label">Prompt, meaningful feedback</div><div class="ev-track"><i class="ev-bar" style="left:45%;width:1%"></i><i class="ev-dept" style="left:45%"></i><i class="ev-me" style="left:46%"></i></div><div class="ev-val"><b>4.46</b> <span>+0.01</span></div></div>
+          <div class="ev-row ev-axis"><div></div><div class="ev-track"><span style="left:0%">4.0</span><span style="left:20%">4.2</span><span style="left:40%">4.4</span><span style="left:60%">4.6</span><span style="left:80%">4.8</span><span style="left:100%">5.0</span></div><div></div></div>
+      </figure>
 
       <h3>Teaching Assistant · University of Florida</h3>
       <ul class="timeline">
