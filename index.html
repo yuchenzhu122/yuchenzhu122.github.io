@@ -64,6 +64,12 @@
            background: var(--card); text-decoration: none; font-weight: 500; font-size: 15px; }
     .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
 
+    .details { margin: 40px 0 0; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 4px 24px; }
+    .details > div { display: grid; grid-template-columns: 140px 1fr; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+    .details > div:last-child { border-bottom: 0; }
+    .details dt { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); padding-top: 2px; }
+    .details dd { margin: 0; line-height: 1.7; }
+
     .timeline { list-style: none; padding: 0; margin: 0; }
     .timeline li { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); }
     .timeline li:last-child { border-bottom: 0; }
@@ -126,6 +132,8 @@
       .hero h1 { font-size: 32px; }
       .grid { grid-template-columns: repeat(2, 1fr); }
       .stats { grid-template-columns: 1fr; }
+      .details { padding: 4px 16px; }
+      .details > div { grid-template-columns: 1fr; gap: 4px; }
       .ev-row { grid-template-columns: 1fr 96px; }
       .ev-label { grid-column: 1 / -1; padding-top: 6px; font-size: 13px; }
       .ev-axis > div:first-child { display: none; }
@@ -172,6 +180,13 @@
           </div>
         </div>
       </div>
+
+      <dl class="details">
+        <div><dt>Fields</dt><dd>Labor Economics, Econometrics, Applied Microeconomics</dd></div>
+        <div><dt>Committee</dt><dd>Robert Ainsworth (Chair)<br>David Sappington<br>Cecilia Peluffo</dd></div>
+        <div><dt>Education</dt><dd>Ph.D. in Economics, University of Florida, expected 2027<br>M.S. in Economics, Johns Hopkins University, 2019<br>B.A. in Economics, minor in Statistics, University of Illinois Urbana-Champaign, 2017</dd></div>
+        <div><dt>Contact</dt><dd>Department of Economics, University of Florida<br>Gainesville, FL 32611<br><a href="mailto:yuchenzhu@ufl.edu">yuchenzhu@ufl.edu</a></dd></div>
+      </dl>
     </section>
 
     <section id="research">
